@@ -46,15 +46,6 @@ while True:
     elif guess_number[2] == number[0] or guess_number[2] == number[1]:
         ball_count = ball_count + 1
 
-
-# for i in range(len(guess_number)):
-#     if number[i] == guess_number[i]:
-#         strike_count += 1
-#     elif number[i] == guess_number[i+1]:
-#         ball_count += 1
-#     elif number[i] == guess_number[i+2]:
-#         ball_count += 1
-
     print("스트라이크 :", strike_count)
     print("볼 :", ball_count)
     print("아웃 :", 3 - strike_count - ball_count)
