@@ -1,14 +1,12 @@
 print("> 수비수가 고른 숫자")
-number1 = 3
-number2 = 2
-number3 = 0
-number = [number1, number2, number3]
-print(number1)
-print(number2)
-print(number3)
+number = [3, 2, 0]
+print(number[0])
+print(number[1])
+print(number[2])
+
+guess_number = []
 
 while True:
-    guess_number = []
     guess_number.clear()
     print("> 첫 번째 숫자를 입력하세요.")
     guess_number.append(int(input("prompt>")))
