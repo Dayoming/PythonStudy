@@ -1,35 +1,45 @@
-from random import *
+from random import randrange
 
-print('> 게임이 시작합니다.')
+print("+----------------------------------------------------------+")
+print("|                      청기 백기 게임                      |")
+print("+----------------------------------------------------------+")
+print("| 진행자의 지시에 맞춰 깃발을 움직이세요.                  |")
+print("| 진행자의 지시는 각 깃발에 대해 아래의 경우가 있습니다.   |")
+print("| - 올려                                                   |")
+print("| - 내려                                                   |")
+print("| - 올리지마                                               |")
+print("| - 내리지마                                               |")
+print("| - 올리지말고 내려                                        |")
+print("| - 내리지말고 올려                                        |")
+print("|                                                          |")
+print("| 조작법                                                   |")
+print("| 청기 올리기 : R 버튼                                     |")
+print("| 청기 내리기 : F 버튼                                     |")
+print("| 백기 올리기 : U 버튼                                     |")
+print("| 백기 내리기 : J 버튼                                     |")
+print("+----------------------------------------------------------+")
 
-order = {'청기 올려': 'R', '청기 내려': 'F',
-         '백기 올려': 'U', '백기 내려': 'J'}
-# dictionary
-# '청기 올려' -> key
-# 'R' -> value
+print("> 게임이 시작합니다.")
 
-# q 추가
-# count 추가
+order = {"청기 올려": "R", "청기 내려": "F",
+         "백기 올려": "U", "백기 내려": "J"}
 
-order_message = list(order.keys())
-count = 0
+order_messages = list(order.keys())
 
 while True:
-    random_index = randrange(len(order_message))
-    message = order_message[random_index]
+    random_index = randrange(len(order_messages))
+    message = order_messages[random_index]
 
-    print('>', message)
-    button = order[message]
+    print(">", message)
+    result = order[message]
 
-    input_char = input('> ')
+    user_input = input("> ")
 
-    if button == input_char.upper():
-        print('성공!')
-        count = count + 1
-    elif input_char == 'q' or input_char == 'Q':
-        print(str(count) + '번 맞추셨습니다.')
-        break
+    # 이 상태로는 게임을 무한히 해야 한다.
+    # 게임을 그만하고 싶을 때는 어떻게 해야 할까?
+
+    if result == user_input.upper():
+        print("성공!")
     else:
-        print('실패!')
-        print(str(count) + '번 맞추셨습니다.')
-        break
+        print("실패!")
+
