@@ -3,13 +3,6 @@
 # 이때 2차원 리스트 안에서 * 은 지뢰이고 .은 지뢰가 아닙니다.
 # 지뢰가 아닌 요소에는 인접한 지뢰의 개수를 출력하는 프로그램을 만드세요.
 
-# 여러 줄을 입력 받으려면 다음과 같이 for 반복문에서 input을 호출한 뒤
-# append로 각 줄을 추가하면 됩니다. (list 안에 문자열을 넣으면 문자열이 문자 리스트로 변환됩니다.)
-
-# matrix = []
-# for i in range(row):
-# matrix.append(list(input()))
-
 from random import *
 
 print("시작할 행과 열을 입력해주세요.")
